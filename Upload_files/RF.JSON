@@ -1,0 +1,23 @@
+[
+    {
+        "prediction": "Flower is Iris-setosa"
+    },
+    {
+        "prediction": "Flower is Iris-setosa"
+    },
+    {
+        "prediction": "Flower is Iris-setosa"
+    },
+    {
+        "prediction": "Flower is Iris-setosa"
+    },
+    {
+        "prediction": "Flower is Iris-versicolor"
+    },
+    {
+        "prediction": "Flower is Iris-setosa"
+    },
+    {
+        "prediction": "Flower is Iris-setosa"
+    }
+]

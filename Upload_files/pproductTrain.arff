@@ -1,0 +1,16 @@
+@relation purchased.product
+
+@attribute customer real
+@attribute age real
+@attribute income real
+@attribute product {book, tv, dvd, cara}
+
+@data
+1,25,46,book
+2,39,100,tv
+3,35,38,dvd
+4,69,150,cara
+5,68,151,cara
+6,25,46,book
+7,26,27,dvd
+8,68,151,?

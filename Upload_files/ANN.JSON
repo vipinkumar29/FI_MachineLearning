@@ -1,0 +1,44 @@
+[
+    {
+        "year": "1",
+        "month": "1",
+        "week": "1",
+        "predictedPrice": "26"
+    },
+    {
+        "year": "1",
+        "month": "4",
+        "week": "1",
+        "predictedPrice": "25"
+    },
+    {
+        "year": "5",
+        "month": "11",
+        "week": "4",
+        "predictedPrice": "30"
+    },
+    {
+        "year": "5",
+        "month": "12",
+        "week": "1",
+        "predictedPrice": "33"
+    },
+    {
+        "year": "5",
+        "month": "12",
+        "week": "2",
+        "predictedPrice": "33"
+    },
+    {
+        "year": "5",
+        "month": "12",
+        "week": "3",
+        "predictedPrice": "33"
+    },
+    {
+        "year": "5",
+        "month": "12",
+        "week": "4",
+        "predictedPrice": "33"
+    }
+]
