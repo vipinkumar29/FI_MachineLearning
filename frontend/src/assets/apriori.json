@@ -1,0 +1,177 @@
+[
+    {
+        "age": "young",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "no",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "no",
+        "tearProdRate": "normal",
+        "contactLenses": "soft"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "yes",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "hard"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "no",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "no",
+        "tearProdRate": "normal",
+        "contactLenses": "soft"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "young",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "hard"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "no",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "no",
+        "tearProdRate": "normal",
+        "contactLenses": "soft"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "yes",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "hard"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "no",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "no",
+        "tearProdRate": "normal",
+        "contactLenses": "soft"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "none"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "no",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "no",
+        "tearProdRate": "normal",
+        "contactLenses": "none"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "yes",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "myope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "hard"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "no",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "no",
+        "tearProdRate": "normal",
+        "contactLenses": "soft"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "reduced",
+        "contactLenses": "none"
+    },
+    {
+        "age": "presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "none"
+    },
+    {
+        "age": "pre-presbyopic",
+        "spectaclePrescrip": "hypermetrope",
+        "astigmatism": "yes",
+        "tearProdRate": "normal",
+        "contactLenses": "none"
+    }
+]

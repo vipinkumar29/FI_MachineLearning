@@ -1,0 +1,24 @@
+.align-right {
+    text-align: right;
+}
+
+.ui-column-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ui-datatable tbody > tr.ui-widget-content {
+    text-align: center;
+}
+
+.ui-datatable tbody > tr.ui-widget-content > td:last-child {
+    background-color: #ccc;
+}
+
+.ui-datatable thead > tr.ui-state-default >  th:last-child {
+    background-color: #ccc;
+}
+
+
+
+

@@ -1,0 +1,47 @@
+[
+    {
+        "id": null,
+        "rowInstance": 1,
+        "outlook": "sunny",
+        "temperature": 85,
+        "humidity": 85,
+        "windy": "FALSE",
+        "prediction": "no"
+    },
+    {
+        "id": null,
+        "rowInstance": 2,
+        "outlook": "rainy",
+        "temperature": 71,
+        "humidity": 91,
+        "windy": "TRUE",
+        "prediction": "no"
+    },
+    {
+        "id": null,
+        "rowInstance": 3,
+        "outlook": "sunny",
+        "temperature": 69,
+        "humidity": 70,
+        "windy": "FALSE",
+        "prediction": "yes"
+    },
+    {
+        "id": null,
+        "rowInstance": 4,
+        "outlook": "rainy",
+        "temperature": 45,
+        "humidity": 45,
+        "windy": "FALSE",
+        "prediction": "no"
+    },
+    {
+        "id": null,
+        "rowInstance": 5,
+        "outlook": "rainy",
+        "temperature": 21,
+        "humidity": 61,
+        "windy": "TRUE",
+        "prediction": "no"
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "age": "30",
+        "job": "unemployed",
+        "prediction": "yes"
+    },
+    {
+        "age": "33",
+        "job": "services",
+        "prediction": "yes"
+    }
+]

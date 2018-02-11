@@ -1,0 +1,20 @@
+[
+    {
+        "id": null,
+        "rowInstance": 0,
+        "outlook": "rainy",
+        "temperature": "cool",
+        "humidity": "normal",
+        "windy": "TRUE",
+        "prediction": "yes"
+    },
+    {
+        "id": null,
+        "rowInstance": 0,
+        "outlook": "overcast",
+        "temperature": "hot",
+        "humidity": "normal",
+        "windy": "FALSE",
+        "prediction": "yes"
+    }
+]

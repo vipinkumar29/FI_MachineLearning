@@ -1,0 +1,50 @@
+[
+    {
+        "customerId": 1,
+        "age": 25,
+        "income": 46,
+        "product": "book"
+    },
+    {
+        "customerId": 2,
+        "age": 39,
+        "income": 100,
+        "product": "tv"
+    },
+    {
+        "customerId": 3,
+        "age": 35,
+        "income": 38,
+        "product": "dvd"
+    },
+    {
+        "customerId": 4,
+        "age": 69,
+        "income": 150,
+        "product": "cara"
+    },
+    {
+        "customerId": 5,
+        "age": 68,
+        "income": 151,
+        "product": "cara"
+    },
+    {
+        "customerId": 6,
+        "age": 25,
+        "income": 46,
+        "product": "book"
+    },
+    {
+        "customerId": 7,
+        "age": 26,
+        "income": 27,
+        "product": "dvd"
+    },
+    {
+        "customerId": 8,
+        "age": 68,
+        "income": 151,
+        "product": "cara"
+    }
+]

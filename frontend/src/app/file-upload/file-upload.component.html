@@ -1,0 +1,95 @@
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/download.png" width="340" height="60" class="d-inline-block align-top" alt="">
+  </a>
+</nav>
+<br>
+<br>
+<section class="well">
+  <h1 style="text-align:center;">AI Suite</h1>
+  <br>
+  <form class="form-horizontal" [formGroup]="fileUploadForm">
+    <div class="form-group">
+      <label for="fileType" class="col-md-1 align-right">File Type</label>
+      <div class="col-md-2">
+        <select class="form-control input-xs" id="fileType" formControlName="fileType" required (change)="fileTypeChange()">
+          <option *ngFor="let fileType of fileTypes" [ngValue]="fileType">
+            {{fileType}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-1">
+      </label>
+      <div class="col-md-2">
+        <input type="file" formControlName="files" (change)="fileChange($event)" onclass="chooseFile" accept="application/pdf,.csv,.arff">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-4 col-md-offset-1">
+        <button type="submit" class="btn btn-primary" (click)="onUpload()">SAVE</button>
+      </div>
+    </div>
+  </form>
+  <p-dataTable *ngIf="_flagLR  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="OUTLOOK" field="outlook"></p-column>
+    <p-column header="TEMPRATURE" field="temperature"></p-column>
+    <p-column header="HUMIDITY" field="humidity"></p-column>
+    <p-column header="WINDY" field="windy"></p-column>
+    <p-column header="PREDICTION" field="prediction"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagDT  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="AGE" field="age"></p-column>
+    <p-column header="JOB" field="job"></p-column>
+    <p-column header="PREDICTION" field="prediction"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagNB  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="OUTLOOK" field="outlook"></p-column>
+    <p-column header="TEMPRATURE" field="temperature"></p-column>
+    <p-column header="HUMIDITY" field="humidity"></p-column>
+    <p-column header="WINDY" field="windy"></p-column>
+    <p-column header="PREDICTION" field="prediction"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagKNN  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="CUSTOMER ID" field="customerId"></p-column>
+    <p-column header="AGE" field="age"></p-column>
+    <p-column header="INCOME" field="income"></p-column>
+    <p-column header="PRODUCT" field="product"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagLinReg  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="TEMPERATURE" field="temperature"></p-column>
+    <p-column header="PREDICTION" field="prediction"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_kMeansClustAlgo  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="AGE" field="age"></p-column>
+    <p-column header="SPECTACLES PRESCRIPTION" field="spectaclePrescrip"></p-column>
+    <p-column header="ASTIGMATISM" field="astigmatism"></p-column>
+    <p-column header="TEAR PRODUCTION RATE" field="tearProdRate"></p-column>
+    <p-column header="CONTACT LENSES" field="contactLenses"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagANN  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="YEAR" field="year"></p-column>
+    <p-column header="MONTH" field="month"></p-column>
+    <p-column header="WEEK" field="week"></p-column>
+    <p-column header="PREDICTED PRICE" field="predictedPrice"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagRanFor  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="PREDICTION" field="prediction"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagApriori  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="AGE" field="age"></p-column>
+    <p-column header="SPECTACLES PRESCRIPTION" field="spectaclePrescrip"></p-column>
+    <p-column header="ASTIGMATISM" field="astigmatism"></p-column>
+    <p-column header="TEAR PRODUCTION RATE" field="tearProdRate"></p-column>
+    <p-column header="CONTACT LENSES" field="contactLenses"></p-column>
+  </p-dataTable>
+  <p-dataTable *ngIf="_flagsvm  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
+    <p-column header="AGE" field="age"></p-column>
+    <p-column header="SPECTACLES PRESCRIPTION" field="spectaclePrescrip"></p-column>
+    <p-column header="ASTIGMATISM" field="astigmatism"></p-column>
+    <p-column header="TEAR PRODUCTION RATE" field="tearProdRate"></p-column>
+    <p-column header="CONTACT LENSES" field="contactLenses"></p-column>
+  </p-dataTable>
+</section>
