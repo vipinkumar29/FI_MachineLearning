@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.deloitte</groupId>
+    <artifactId>AISuite</artifactId>
+    <version>2017.08.1.01</version>
+    <name>AISuite</name>
+    <description>AISuite</description>
+    <packaging>war</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.0.RELEASE</version>
+    </parent>
+
+    <properties>
+        <!-- <nd4j.backend>nd4j-native-platform</nd4j.backend> -->
+        <java.version>1.8</java.version>
+        <!--  -->
+        <!-- <nd4j.version>0.9.1</nd4j.version>
+        <dl4j.version>0.9.1</dl4j.version>
+        <datavec.version>0.9.1</datavec.version>
+        <arbiter.version>0.9.1</arbiter.version>
+        <rl4j.version>0.9.1</rl4j.version>
+
+        For Spark examples: change the _1 to _2 to switch between Spark 1 and Spark 2
+        <dl4j.spark.version>0.9.1_spark_1</dl4j.spark.version>
+        <datavec.spark.version>0.9.1_spark_1</datavec.spark.version>
+
+        Scala binary version: DL4J's Spark and UI functionality are released with both Scala 2.10 and 2.11 support
+        <scala.binary.version>2.11</scala.binary.version>
+        <scala.plugin.version>3.2.2</scala.plugin.version> -->
+    </properties>
+    
+    
+    <!-- <modules>
+        <module>dl4j-examples</module>
+        <module>dl4j-spark-examples</module>
+        <module>datavec-examples</module>
+        <module>dl4j-cuda-specific-examples</module>
+        <module>nd4j-examples</module>
+        <module>rl4j-examples</module>
+        <module>lstm-hdfs</module>
+    </modules> -->
+
+		
+     <dependencies>
+	    <!-- <dependency>
+			  <groupId>org.springframework.boot</groupId>
+			  <artifactId>spring-boot-starter-web</artifactId>
+			    <exclusions>
+			        <exclusion>
+			            <groupId>org.springframework.boot</groupId>
+			            <artifactId>spring-boot-starter-tomcat</artifactId>
+			        </exclusion>
+			    </exclusions>
+			</dependency> -->
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency> -->
+
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- JSTL -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.charts4j</groupId>
+			<artifactId>charts4j</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+		<!-- ItextPDF -->
+	<dependency>
+		<groupId>com.itextpdf</groupId>
+		<artifactId>itextpdf</artifactId>
+		<version>5.5.6</version>
+	</dependency>
+	
+	<!-- Pdf library --> 
+    <!-- <dependency>
+		<groupId>com.lowagie</groupId>
+		<artifactId>itext</artifactId>
+		<version>2.1.7</version>
+    </dependency>
+    <dependency>
+		<groupId>org.xhtmlrenderer</groupId>
+		<artifactId>core-renderer</artifactId>
+		<version>R8pre2</version>
+		<scope>compile</scope>
+	</dependency> -->
+	<!-- DynamicReports -->
+		<dependency>
+			<groupId>net.sourceforge.dynamicreports</groupId>
+			<artifactId>dynamicreports-core</artifactId>
+			<version>3.1.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+	        <groupId>com.h2database</groupId>
+	        <artifactId>h2</artifactId>
+	        <version>1.3.156</version>
+	    </dependency>
+		<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.hateoas</groupId>
+			<artifactId>spring-hateoas</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+		<!-- <dependency>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>mongo-java-driver</artifactId>
+		    <version>3.4.1</version>
+		</dependency> -->
+		  <dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+		<version>3.10-FINAL</version>
+	</dependency>
+	 <dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml-schemas</artifactId>
+		<version>3.10-FINAL</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-csv</artifactId>
+		    <version>1.1</version>
+		</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.any23/apache-any23-csvutils -->
+		<dependency>
+		    <groupId>org.apache.any23</groupId>
+		    <artifactId>apache-any23-csvutils</artifactId>
+		    <version>1.1</version>
+		</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+		<dependency>
+		    <groupId>commons-collections</groupId>
+		    <artifactId>commons-collections</artifactId>
+		    <version>3.0</version>
+		</dependency>
+		
+		<!-- Utilities -->
+   		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+   
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+		
+   		<!-- <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.12</version>
+		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/net.jafama/jafama -->
+		<dependency>
+			<groupId>net.jafama</groupId>
+			<artifactId>jafama</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		
+		<!-- CSV library -->
+		<dependency>
+			<groupId>net.sf.supercsv</groupId>
+			<artifactId>super-csv</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.ignite</groupId>
+		    <artifactId>ignite-core</artifactId>
+		    <version>1.0.0</version>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/gov.nist.math/jama -->
+		<dependency>
+		    <groupId>gov.nist.math</groupId>
+		    <artifactId>jama</artifactId>
+		    <version>1.0.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.nd4j/nd4j-native -->
+		<dependency>
+		    <groupId>org.nd4j</groupId>
+		    <artifactId>nd4j-native</artifactId>
+		    <version>0.9.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-nlp -->
+		<!-- <dependency>
+		    <groupId>org.deeplearning4j</groupId>
+		    <artifactId>deeplearning4j-nlp</artifactId>
+		    <version>0.9.1</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.datavec/datavec-api -->
+		<!-- <dependency>
+		    <groupId>org.datavec</groupId>
+		    <artifactId>datavec-api</artifactId>
+		    <version>0.9.1</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.deeplearning4j/arbiter-core -->
+		<!-- <dependency>
+		    <groupId>org.deeplearning4j</groupId>
+		    <artifactId>arbiter-core</artifactId>
+		    <version>0.9.1</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.deeplearning4j/rl4j-core -->
+		<!-- <dependency>
+		    <groupId>org.deeplearning4j</groupId>
+		    <artifactId>rl4j-core</artifactId>
+		    <version>0.9.1</version>
+		</dependency> -->
+		<!-- <dependency>
+		    <groupId>net.sf</groupId>
+		    <artifactId>javaml</artifactId>
+		    <version>0.1.7</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-dev -->
+			<dependency>
+			    <groupId>nz.ac.waikato.cms.weka</groupId>
+			    <artifactId>weka-dev</artifactId>
+			    <version>3.7.5</version>
+			</dependency>
+		<!-- https://mvnrepository.com/artifact/org.kohsuke.args4j/args4j-maven-plugin -->
+		<!-- <dependency>
+		    <groupId>org.kohsuke.args4j</groupId>
+		    <artifactId>args4j-maven-plugin</artifactId>
+		    <version>2.33</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+		<dependency>
+		    <groupId>com.opencsv</groupId>
+		    <artifactId>opencsv</artifactId>
+		    <version>4.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-math3</artifactId>
+		    <version>3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+		<dependency>
+		    <groupId>javax.json</groupId>
+		    <artifactId>javax.json-api</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/us.parr/parrtlib -->
+		<dependency>
+		    <groupId>us.parr</groupId>
+		    <artifactId>parrtlib</artifactId>
+		    <version>0.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.beykery/neuroph -->
+		<dependency>
+		    <groupId>org.beykery</groupId>
+		    <artifactId>neuroph</artifactId>
+		    <version>2.92</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/tw.edu.ntu.csie/libsvm -->
+		<dependency>
+		    <groupId>tw.edu.ntu.csie</groupId>
+		    <artifactId>libsvm</artifactId>
+		    <version>3.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/LibSVM -->
+		<dependency>
+		    <groupId>nz.ac.waikato.cms.weka</groupId>
+		    <artifactId>LibSVM</artifactId>
+		    <version>1.0.10</version>
+		</dependency>
+		
+
+    </dependencies>
+   <build>
+        <plugins>
+           <plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<path>/aiSuite</path>
+					</configuration>
+			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <compilerVersion>1.8</compilerVersion>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            
+            <!-- Plugin that creates website with information and reports about project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.4</version>
+				<configuration>
+					<reportPlugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-project-info-reports-plugin</artifactId>
+							<version>2.8</version>
+							<configuration>
+								<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+							</configuration>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>index</report>
+										<report>dependencies</report>
+										<report>project-team</report>
+										<!-- <report>issue-tracking</report> <report>source-repository</report> 
+											<report>integration</report> -->
+									</reports>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>2.18.1</version>
+							<configuration>
+								<forkMode>always</forkMode>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-pmd-plugin</artifactId>
+							<version>3.4</version>
+							<configuration>
+								<targetJdk>1.8</targetJdk>
+							</configuration>
+						</plugin>
+						<!-- need to run jxr:jxr once so links to pmd and other plugins will 
+							be generated -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-jxr-plugin</artifactId>
+							<version>2.5</version>
+						</plugin>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>cobertura-maven-plugin</artifactId>
+							<version>2.7</version>
+						</plugin>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>findbugs-maven-plugin</artifactId>
+							<version>3.0.1</version>
+							<configuration>
+								<threshold>Medium</threshold>
+								<effort>Max</effort>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-checkstyle-plugin</artifactId>
+							<version>2.15</version>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>checkstyle-aggregate</report>
+									</reports>
+								</reportSet>
+							</reportSets>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-javadoc-plugin</artifactId>
+							<version>2.10.3</version>
+							<reportSets>
+								<reportSet>
+									<reports>
+										<report>javadoc</report>
+									</reports>
+								</reportSet>
+							</reportSets>
+						</plugin>
+					</reportPlugins>
+				</configuration>
+			</plugin>
+		 </plugins>
+    </build>
+</project>

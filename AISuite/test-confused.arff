@@ -1,0 +1,9 @@
+@relation icecreamsales.symbolic
+
+@attribute temperature real
+@attribute icecreamsales real
+
+@data
+	
+14.2,?
+16.4,?

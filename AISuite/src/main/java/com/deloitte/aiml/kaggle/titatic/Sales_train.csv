@@ -1,0 +1,20 @@
+OrganizationId,SalesResult,Name,Type,YoB,RegNo,Revenue,EmbarkedMilestone
+1,0,Apple,Internet,22,A/5 21171,7.25,S
+2,1,Google,Internet,38,PC 17599,71.2833,C
+3,1,Amazon,Service,26,STON/O2. 3101282,7.925,S
+4,1,Flipkart,Internet,35,113803,53.1,S
+5,0,IBM,Service,35,373450,8.05,S
+6,0,Cisco,Internet,,330877,8.4583,Q
+7,0,PWC,Service,54,17463,51.8625,S
+8,0,KPMG,Service,2,349909,21.075,S
+9,1,Deloitte,Service,27,347742,11.1333,S
+10,1,Visa Inc.,Internet,14,237736,30.0708,C
+11,1,Wallmart labs,Internet,4,PP 9549,16.7,S
+12,1,Linkedin,Internet,58,113783,26.55,S
+13,0,EY,Service,20,A/5. 2151,8.05,S
+14,0,Ebay,Service,39,347082,31.275,S
+15,0,Cerner,Service,14,350406,7.8542,S
+16,1,Target Inc.,Service,55,248706,16,S
+17,0,CGI,Service,2,382652,29.125,Q
+18,1,GoIbibo,Internet,,244373,13,S
+19,0,Titan,Service,31,345763,18,S
