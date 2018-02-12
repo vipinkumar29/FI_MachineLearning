@@ -19,6 +19,9 @@
     background-color: #ccc;
 }
 
-
-
-
+.h3, h3 {
+    font-size: 25px;
+    margin: 75px;
+    font-style: italic;
+    word-wrap: break-word;
+}

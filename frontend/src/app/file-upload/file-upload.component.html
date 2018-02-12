@@ -33,6 +33,7 @@
       </div>
     </div>
   </form>
+ 
   <p-dataTable *ngIf="_flagLR  == true" [value]="_rowData" resizableColumns='true' [responsive]="true">
     <p-column header="OUTLOOK" field="outlook"></p-column>
     <p-column header="TEMPRATURE" field="temperature"></p-column>
@@ -93,3 +94,55 @@
     <p-column header="CONTACT LENSES" field="contactLenses"></p-column>
   </p-dataTable>
 </section>
+
+
+<section *ngIf="_desLR ">
+    <h3> <b>Logistic regression</b> is a statistical method for analyzing a dataset in which there are one or more independent
+       variables that determine an outcome. The outcome is measured with a dichotomous variable 
+       (in which there are only two possible outcomes). In logistic regression, the dependent variable is binary or dichotomous, i.e. it only contains data coded as 1 (TRUE, success, pregnant, etc.) or 0 (FALSE, failure, non-pregnant, etc.). </h3>
+  </section>
+
+  <section  *ngIf="_desDT ">
+    <h3><b>Decision tree</b> is a map of the possible outcomes of a series of related choices. It allows an individual or organization to weigh possible actions against one another based on their costs, probabilities, and benefits. They can can be used either to drive informal discussion or to map out an algorithm that predicts the best choice mathematically.  </h3>
+  </section>
+
+  <section   *ngIf="_desNB ">
+      <h3> In machine learning, <b>Naive Bayes</b> classifiers are a family of simple probabilistic classifiers based on applying Bayes' theorem with strong (naive) independence assumptions between the features.
+          Naive Bayes classifiers are highly scalable, requiring a number of parameters linear in the number of variables (features/predictors) in a learning problem. Maximum-likelihood training can be done by evaluating a closed-form expression, which takes linear time, rather than by expensive iterative approximation as used for many other types of classifiers.  </h3>
+    </section>
+  
+    <section   *ngIf="_desKNN ">
+      <h3> <b> K-Nearest Neighbors </b> is one of the most basic yet essential classification algorithms in Machine Learning. It belongs to the supervised learning domain and finds intense application in pattern recognition, data mining and intrusion detection.
+  
+          It is widely disposable in real-life scenarios since it is non-parametric, meaning, it does not make any underlying assumptions about the distribution of data (as opposed to other algorithms such as GMM, which assume a Gaussian distribution of the given data). </h3>
+    </section>
+  
+    <section   *ngIf="_desLinReg ">
+      <h3> <b> Linear regression</b> is a basic and commonly used type of predictive analysis.  The overall idea of regression is to examine two things: (1) does a set of predictor variables do a good job in predicting an outcome (dependent) variable? (2) Which variables in particular are significant predictors of the outcome variable, and in what way do they–indicated by the magnitude and sign of the beta estimates–impact the outcome variable?  These regression estimates are used to explain the relationship between one dependent variable and one or more independent variables.  The simplest form of the regression equation with one dependent and one independent variable is defined by the formula y = c + b*x, where y = estimated dependent variable score, c = constant, b = regression coefficient, and x = score on the independent variable. </h3>
+    </section>
+  
+    <section   *ngIf="_desRanFor ">
+      <h3> <b>Random forests </b>are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. </h3>
+    </section>
+  
+    <section   *ngIf="_deskMeansClustAlgo ">
+      <h3> 
+         <b> K-means clustering </b> is a type of unsupervised learning, which is used when you have unlabeled data (i.e., data without defined categories or groups). The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K. The algorithm works iteratively to assign each data point to one of K groups based on the features that are provided. Data points are clustered based on feature similarity. The results of the K-means clustering algorithm are:
+          The centroids of the K clusters, which can be used to label new data
+          Labels for the training data (each data point is assigned to a single cluster) </h3>
+    </section>
+  
+    <section   *ngIf="_desANN ">
+      <h3><b> Artificial neural networks (ANNs)</b> or connectionist systems are computing systems inspired by the biological neural networks that constitute animal brains. Such systems learn (progressively improve performance on) tasks by considering examples, generally without task-specific programming. For example, in image recognition, they might learn to identify images that contain cats by analyzing example images that have been manually labeled as "cat" or "no cat" and using the results to identify cats in other images. They do this without any a priori knowledge about cats, e.g., that they have fur, tails, whiskers and cat-like faces. Instead, they evolve their own set of relevant characteristics from the learning material that they process. </h3>
+    </section>
+  
+    <section   *ngIf="_dessvm ">
+      <h3> In machine learning, <b> Support vector machines</b> (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. Given a set of training examples, each marked as belonging to one or the other of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+  
+          In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces </h3>
+    </section>
+
+    <section   *ngIf="_desApriori ">
+        <h3> The <b>Apriori algorithm</b> was proposed by Agrawal and Srikant in 1994. Apriori is designed to operate on databases containing transactions (for example, collections of items bought by customers, or details of a website frequentation). Other algorithms are designed for finding association rules in data having no transactions (Winepi and Minepi), or having no timestamps (DNA sequencing). Each transaction is seen as a set of items (an itemset). Given a threshold (displaystyle C) C, the Apriori algorithm identifies the item sets which are subsets of at least (\displaystyle C) C transactions in the database.
+            Apriori uses a "bottom up" approach, where frequent subsets are extended one item at a time (a step known as candidate generation), and groups of candidates are tested against the data. The algorithm terminates when no further successful extensions are found. </h3>
+      </section>

@@ -28,6 +28,17 @@ export class FileUploadComponent implements OnInit {
   private _flagApriori = false;
   private _flagsvm = false;
 
+  private _desLR = false;
+  private _desDT = false;
+  private _desNB = false;
+  private _desKNN = false;
+  private _desLinReg = false;
+  private _desRanFor = false;
+  private _deskMeansClustAlgo = false;
+  private _desANN = false;
+  private _desApriori = false;
+  private _dessvm = false;
+
   constructor(private _renderer: Renderer, private _fb: FormBuilder, private _fileUploadService: FileUploadService) { }
 
   ngOnInit() {
@@ -37,10 +48,145 @@ export class FileUploadComponent implements OnInit {
     });
   }
 
+  private disbaleTable(){
+    this._flagLR = false;
+    this._flagDT = false;
+    this._flagNB = false;
+    this._flagKNN = false;
+    this._flagLinReg = false;
+    this._flagRanFor = false;
+    this._kMeansClustAlgo = false;
+    this._flagANN = false;
+    this._flagApriori = false;
+    this._flagsvm = false;
+  }
+
   fileTypeChange() {
     console.log('file Type change');
     this._file = null;
     this.fileUploadForm.controls['files'].setValue(null);
+    const fileType = this.fileUploadForm.controls['fileType'].value;
+    if (fileType === 'Decision Tree') {
+      this.disbaleTable();
+      this._desLR = false;
+      this._desNB = false;
+      this._desDT = true;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Logical Regression') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desNB = false;
+      this._desLR = true;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Naive Bayes') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = true;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Kth Nearest Neighbour') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = true;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Linear Regression') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = false;
+      this._desLinReg = true;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Random Forest') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = true;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'K Means Clustering Algorithm') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = true;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Artificial Neural Networks') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = true;
+      this._desApriori = false;
+      this._dessvm = false;
+    } else if (fileType === 'Apriori') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = true;
+      this._dessvm = false;
+    } else if (fileType === 'Support Vector Machine') {
+      this.disbaleTable();
+      this._desDT = false;
+      this._desLR = false;
+      this._desNB = false;
+      this._desKNN = false;
+      this._desLinReg = false;
+      this._desRanFor = false;
+      this._deskMeansClustAlgo = false;
+      this._desANN = false;
+      this._desApriori = false;
+      this._dessvm = true;
+    }
   }
 
   fileChange(event) {
