@@ -66,7 +66,7 @@ public class KMeansClustController {
 			BufferedReader datafile = readDataFile(file.getOriginalFilename());
 			Instances data = new Instances(datafile);
 			data.setClassIndex(data.numAttributes() - 1);
-			kmeans.buildClusterer(data);
+		//	kmeans.buildClusterer(data);
 			
 			Classifier ibk = new IBk(2);
 			ibk.buildClassifier(data);
@@ -75,12 +75,12 @@ public class KMeansClustController {
 			System.out.println("Prdeiction:=> "+data.lastInstance().stringValue(4));
 			// This array returns the cluster number (starting with 0) for each instance
 			// The array has as many elements as the number of instances
-			int[] assignments = kmeans.getAssignments();
+			/*int[] assignments = kmeans.getAssignments();
 			int i=0;
 			for(int clusterNum : assignments) {
 				System.out.printf("Instance %d -> Cluster %d \n", i, clusterNum);
 				i++;
-			 	}
+			 	}*/
 			List<KMeansClustForm> kMeansClustFormList = new ArrayList<>();
 			for(int j=0; j<data.size(); j++){
 				KMeansClustForm kMeansClustForm = new KMeansClustForm();
